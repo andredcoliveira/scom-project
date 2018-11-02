@@ -19,6 +19,7 @@ elif [[ "$RELEASE" =~ "Debian" ]]; then
   apt-get install -y nodejs
 else
   echo -e "Need to install Nodejs manually. Check your distribution and follow the official instructions:\n\thttps://nodejs.org/en/download/package-manager/"
+  exit
 fi
 
 # Verify that npm is up to date (needs 'sudo')
