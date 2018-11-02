@@ -30,3 +30,6 @@ npm init -y
 
 # Install 'torrent-stream'
 npm install torrent-stream
+
+# Permission to edit
+chmod -R 777 .
