@@ -37,7 +37,6 @@ VlcCommand(function (err, cmdPath) {
         console.log("Unknown OS");
         return;
     }
-    console.log(`${cmdDelete} ${path}/*`);
     cp.exec(`${cmdDelete} ${path}/*`, (err, stdout, stderr) => {
         if (err) { // node couldn't execute the command
             console.log("Files not found. Do not have any videos to delete.");
