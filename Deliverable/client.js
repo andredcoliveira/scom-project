@@ -7,7 +7,7 @@ var port = 8991;
 let filename = "";
 let oldMagnet = "";
 
-exec(`rm videos/*.mp4`, (err, stdout, stderr) => {
+exec(`rm *.mp4`, (err, stdout, stderr) => {
     if (err) {
         // node couldn't execute the command
         console.log(err);
@@ -35,8 +35,8 @@ client.on('data', function(data) {
     if (data.toString() !== oldMagnet) {
           filename = data.slice(data.indexOf("&dn=") + 4, data.indexOf(".mp4") + 4);
           console.log(filename);
-        //   exec(`./../node_modules/.bin/webtorrent-hybrid download "${data}" -q -o "videos/" && sleep 1 && /Applications/VLC.app/Contents/MacOS/VLC --play-and-exit videos/${filename}`, (err, stdout, stderr) => {
-          exec(`./../node_modules/.bin/webtorrent-hybrid download "${data}" -q --vlc --play-and-exit`, (err, stdout, stderr) => {
+          exec(`./../node_modules/.bin/webtorrent-hybrid download "${data}" -q && sleep 1 && /Applications/VLC.app/Contents/MacOS/VLC --play-and-exit ${filename}`, (err, stdout, stderr) => {
+        //   exec(`./../node_modules/.bin/webtorrent-hybrid download "${data}" -q --vlc --play-and-exit`, (err, stdout, stderr) => {
             if (err) {
                   // node couldn't execute the command
                   console.log(err);
