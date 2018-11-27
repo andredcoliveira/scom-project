@@ -33,3 +33,26 @@ npm install torrent-stream
 
 # Permission to edit
 chmod -R 777 .
+
+# Add bittorrent modules
+npm install webtorrent
+npm install webtorrent-hybrid
+npm install bittorrent-tracker
+npm install dht-bootstrap
+
+# Add npm packages in client side
+npm install net
+npm install child_process
+npm install os
+npm install vlc-command
+
+# Add npm packages in server side
+npm install clivas
+
+npm audit fix
+
+# run client
+npm client.js <ip> <port>
+
+# run server
+npm server.js [tracker || dht] <ip> <port>
