@@ -1,6 +1,4 @@
-# scom-project
-
-## BitTorrent Based Live Streaming
+# BitTorrent Based Live Streaming
 
 Run **setup1.sh** to check if node.js is installed in your computer.
 ```
