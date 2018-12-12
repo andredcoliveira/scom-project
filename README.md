@@ -8,13 +8,13 @@ chmod +x setup1.sh
 ./setup1.sh
 ```
 
-After node.js being already installed, run **setup2.sh** to install all npm necessary packages.
+After node.js is installed, run **setup2.sh** for npm to install all dependencies.
 ```
 chmod +x setup2.sh
 ./setup2.sh
 ```
 
-Follow the printed guidelines in the console to run either the **client.js** either the **broadcast.js**
+Follow the printed guidelines in the console to run a *Client* (client.js) or the *Broadcaster* (broadcast.js).
 
 Read the Report to understand the arquitecture that was implemented, the methods used and the usage of each javascript file.
 
